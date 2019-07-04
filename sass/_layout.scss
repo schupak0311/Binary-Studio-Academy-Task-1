@@ -1,0 +1,147 @@
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--shadow-dark);
+    min-height: 100vh;
+    overflow: hidden;
+
+    @media only screen and (max-width: $bp-large) {
+        margin: 0;
+    }
+
+}
+
+.header {
+    font-size: 1.4rem;
+    height: 10rem;
+    background-color: #fff;
+    border-bottom: var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    flex: 0 0 26%;
+    display: flex;
+    flex-direction: column;
+    min-width: 26%;
+    position: relative;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex: 0 0 0%;
+        width: 100%;
+
+    }
+
+}
+
+.detail {
+    width: 100%;
+    flex: 0 0 74%;
+    display: flex;
+    min-width: 40rem;
+    // grid-template-rows: repeat(auto-fit, minmax(25rem, 0.6fr));
+    font-size: 1.4rem;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+
+    @media only screen and (max-width: $bp-medium) {
+        flex: 0 0 100%;
+        // justify-content: stretch;
+        // position: relative;
+
+    }
+
+}
+
+.user-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 1rem;
+
+    // @media only screen and (max-width: 640px) {
+    //     width: 100%;
+    // }
+}
+
+.book {
+    background-image: linear-gradient(105deg,
+            rgba(white, .9) 0%,
+            rgba(white, .9) 50%,
+            pink 50%);
+    background-size: 100%;
+    width: 95%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(black, .2);
+    display: inline;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+
+    &__form {
+        width: 50%;
+        padding: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
+}
+
+.book-small {
+    display: none;
+
+    @media only screen and (max-width: $bp-medium) {
+        background-image: linear-gradient(105deg,
+                rgba(white, .9) 0%,
+                rgba(white, .9) 50%,
+                pink 50%);
+        background-size: 100%;
+        width: 90%;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(black, .2);
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin-top: 5%;
+        margin-left: 5%;
+
+        &__form {
+            width: 100%;
+            padding: 5rem;
+        }
+    }
+}
+
+.tag-cloud {
+    display: flex;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
+
+    &__small {
+        display: none;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: flex;
+            margin-top: 2rem;
+            margin-right: 2rem;
+        }
+    }
+}
